@@ -9,6 +9,10 @@ cypressOps:
   Build: "Hyperexecute Cypress Sample Build"
   Tags: ["HYP-Cypress", "Linux", "Matrix", "Accessibility"]
   BuildTags: ["HYP-Cypress-v9"]
+  accessibility: true
+  accessibilityWcagVersion: "wcag21a"
+  accessibilityBestPractice: false  
+  accessibilityNeedsReview: true
 
 pre:
   - npm install
@@ -25,4 +29,4 @@ testSuites:
 
 parallelism: 1
 
-jobLabel: [cypress-v9, linux, nmatrix]
+jobLabel: [cypress-v9, linux, nmatrix, accessibility]
